@@ -1,0 +1,108 @@
+.article {
+    margin: 100px 0px;
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        gap: 1%;
+        .card {
+            width: 22%;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 25px 0px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            position: relative;
+            box-shadow: 0px 2px 10px #00000030;
+            transition: 0.7s;
+            .card-content{
+                border-bottom: 1px solid rgb(199, 199, 199);
+            } 
+            &:hover {
+                transform: translateY(-15px);
+            }
+            // &:hover .more {
+            //     background-color: #2169f3;
+            // }
+            &:hover .more button a{
+                color: purple;
+            }
+            &:hover .more i {
+                color: purple;
+                left: 10px;
+                animation-timing-function: linear;
+                animation-iteration-count: infinite;
+                animation-name: arrow;
+                animation-duration: 0.7s;
+                @keyframes arrow {
+                    0% {
+                        left: 0px;
+                    }
+                    50% {
+                        left: 5px;
+                    }
+                    100% {
+                        left: 0px;
+                    }
+                }
+            }
+            img {
+                position: relative;
+                width: 100%;
+            }
+            h4 {
+                color: #2169f3;
+            }
+            h4,p {
+                margin: 10px 10px;
+            }
+            p{
+                font-size: 14px;
+                color: #777;
+                line-height: 1.5;
+            }
+        }
+        @media (max-width:992px) {
+            .card {
+                width: 40%;
+            }
+        }
+        @media (max-width:768px) {
+            .card {
+                width: auto;
+            }
+        }
+        .more {
+            padding: 20px 0px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            button {
+                border:none;
+                background-color: transparent;
+                font-size: 16px;
+                font-weight: 800;
+                a {
+                    color: #2169f3;
+                }
+            }
+            i {
+                color: #2169f3;
+                font-size: 20px; 
+                position: relative;
+                left: 0;
+                // transition: 0.7s;
+            }
+        }
+    }
+}
+// .card:hover {
+//     transform: translateY(-10px);
+// }
+// .card:hover .more {
+//     background-color: #2169f3;
+// }
+// .card:hover .more button a{
+//     color: white;
+// }

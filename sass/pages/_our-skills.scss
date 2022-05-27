@@ -1,0 +1,63 @@
+.skill-progress {
+    position: absolute;
+    height: inherit;
+    background-color: #2169f3;
+}
+// ##############################
+.our-skills {
+    margin: 75px 0px;
+    padding: 75px 0px;
+    .content {
+        margin: 50px 0px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @media (max-width:992px) {
+            img {
+                display: none;
+            }
+        }
+        .skills {
+            width: 50%;
+            position: relative;
+            height: 365px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            .skill {
+                h3 {
+                    display: flex;
+                    justify-content: space-between;
+                    color: #2169f3;
+                    span {
+                        font-size: 14px;
+                        color: #2169f3;
+                        padding: 5px;
+                        border: 1px solid #dddcdc;
+                        border-radius: 5px;
+                    }
+                }
+                .the-progress {
+                    width: 100%;
+                    height: 30px;
+                    margin: 10px 0px;
+                    background-color: #ececec;
+                    border: 1px solid purple;
+                    padding: 2px 1px;
+                }
+            }
+        }
+        @media (max-width:992px) {
+            .skills {
+                width: 90%;
+                margin: auto;
+            }
+        }
+    }
+}
+.skill-progress {
+    position: absolute;
+    height: 24px;
+    transition: 3s;
+    background-color: #2169f3;
+}

@@ -1,0 +1,66 @@
+.home {
+    background-color: #eee;
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        height: 100vh;
+        h1 {
+            color: #2169f3;
+            border-bottom: 1px solid purple;
+            width: fit-content;
+            padding: 15px 0px;
+            position: relative;
+            span {
+                color: purple;
+            }
+        }
+        h1::after {
+            content: '';
+            position: absolute;
+            background-color: purple;
+            width: 100%;
+            height: 1px;
+            bottom: -10px;
+            left: 0;
+        }
+        p {
+            line-height: 1.5;
+            font-size: 22px;
+            font-weight: 600;
+            color: #2169f3;
+        }
+        .images {
+            height: 450px;
+            z-index: 2;
+            @media (max-width:992px) {
+                img {
+                    width: 400px;
+                }
+            }
+            @media (max-width:768px) {
+                img {
+                    display: none;
+                }
+            }
+            img {
+                position: relative;
+                animation-name: up-down;
+                animation-duration: 2.5s;
+                animation-timing-function: linear;
+                animation-iteration-count: infinite;
+                @keyframes up-down {
+                    0% {
+                        bottom: 0;
+                    }
+                    50% {
+                        bottom: 30px;
+                    }
+                    100% {
+                        bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}

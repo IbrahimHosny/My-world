@@ -1,0 +1,36 @@
+.gallery {
+    padding: 75px 0px;
+    margin: 75px 0px;
+    background-color: #ececec;
+    .gallery-images {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        .image {
+            margin: 20px 0px;
+            width: 30%;
+            border: 15px solid white;
+            overflow: hidden;
+            box-shadow:5px 5px 10px #9999999e;
+            img {
+                width: 100%;
+                transform: scale(1.1);
+                transition: 1s;
+            }
+        }
+        @media (max-width:768px) {
+            .image {
+                width: auto;
+            }
+        }
+        .image:hover img{
+            transform: rotate(5deg) scale(1.4);
+        }
+    }
+    @media (max-width:768px) {
+        .gallery-images {
+            justify-content: center;
+        }
+    }
+}

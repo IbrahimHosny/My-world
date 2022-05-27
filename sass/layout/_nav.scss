@@ -1,0 +1,244 @@
+.main-nav {
+    background-color: white;
+    box-shadow: 5px 5px 10px #3333;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: inherit;
+        padding-right: 35px;
+        .links {
+            z-index: 2;
+        }
+        .burger-menu {
+            cursor: pointer;
+            display: none;
+            position: relative;
+            div {
+                width: 40px;
+                height: 4px;
+                border-radius: 5px;
+                background-color: #2169f3;
+                margin: 5px 0px;
+                transition: 0.8s;
+            }
+        }
+        @media (max-width:768px) {
+            .burger-menu {
+                display: block;
+            }
+        }
+        @media (max-width:768px) {
+            .nav-links {
+        display: none;
+        top: 100%;
+        height: auto;
+        width: auto;
+        right: 0;
+        position: absolute;
+        flex-direction: column;
+        background-color: white;
+        li {
+            width: 100%;
+            padding: 25px 20px;
+            position: relative;
+        }
+        li::after {
+            content: '';
+            position: absolute;
+            border-top: 10px solid #2169f3;
+            border-right: 10px solid transparent;
+            border-left: 10px solid transparent;
+            top: 25px;
+            left: 0;
+            transition: 0.5s;
+            display: none;
+        }
+        li:hover::after{
+                display: block;
+                animation-name: repeat-upDown;
+                animation-timing-function: linear;
+                animation-duration: 1s;
+                animation-iteration-count:infinite;
+                @keyframes repeat-upDown {
+                    0% {
+                        top: 35px;
+                    }
+                    50% {
+                        top: 25px;
+                    }
+                    100% {
+                        top: 35px;
+                    }
+                }
+            }
+            }
+            li:last-child::after {
+                content: '';
+                position: absolute;
+                border-top: 10px solid transparent;
+                border-bottom: 10px solid transparent;
+                border-right: 10px solid #2169f3;
+                border-left: 5px solid transparent;
+                top: 25px;
+                left: 0;
+                transition: 0.5s;
+                display: none;
+            }
+            li:hover:last-child:after{
+                display: block;
+                animation-name: go-fwd;
+                animation-timing-function: linear;
+                animation-duration: 0.4s;
+                animation-iteration-count:unset;
+                @keyframes go-fwd {
+                    0% {
+                        left: 0px;
+                    }
+                    100% {
+                        left: -15px;
+                    }
+                }
+                left: -15px;
+            }
+            .links:hover .burger-menu {
+                height: 100%;
+                top: 135px;
+                right: -85px;
+                div {
+                    margin: 0;
+                }
+                #line-1 {
+                    transform: scale(0);
+                    transform-origin: right;
+                }
+                #line-2 {
+                    background-color: red;
+                    position: absolute;
+                    top: 55%;
+                }
+                #line-3 {
+                    transform: scale(0);
+                    transform-origin: left;
+                }
+            }
+            .links:hover .nav-links {
+                display: block;
+                position: relative;
+                top: 170px;
+                right: -35px;
+            }
+        }
+    @media (min-width:768px) {
+        .links {
+            width: fit-content;
+            height: 100%;
+            z-index: 2;
+            .nav-links {
+                width: fit-content;
+                li {
+                    width: auto;
+                    margin: 0px 10px;
+                }
+            }
+        }
+    }
+    }
+    @media (max-width:768px) {
+        .container {
+            width: 100%;
+        }
+    }
+    a {
+        color: black;
+        font-weight: 600;
+    }
+    h3 {
+        color: purple;
+        text-transform: uppercase;
+        letter-spacing: 1.2px;
+        padding: 2px 0px;
+        border-bottom: 2px solid #2169f3;
+        height: 50px;
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+    ul {
+        width: 50%;
+        height: inherit;
+        display: flex;
+        align-items: center;
+        position: relative;
+        li {
+            width: 25%;
+            height: inherit;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        li::before {
+            content: '';
+            position: absolute;
+            background-color: #2169f3;
+            width: 0%;
+            height: 3px;
+            top: 0;
+            left: 0;
+        }
+        li:hover a{
+            color: #2169f3;
+        }
+        li:hover::before{
+            transition: 0.6s;
+            width: 100%;
+        }
+        #other-links {
+            position: relative;
+            .other-links {
+            background-color: white;
+            position: absolute;
+            bottom: -550px;
+            transition: 0.5s;
+            transition-timing-function: linear;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            display: flex;
+            opacity: 0%;
+            width: 350px;
+            z-index: -2;
+            i {
+                margin-right: 15px;
+                color: purple;
+            }
+            a {
+                color: #2169f3;
+                width: 150px;
+                height: 100px;
+                display: flex;
+                align-items: center;
+            }
+        }
+        }
+        #other-links:hover .other-links {
+            opacity: 100%;
+            bottom: -300px;
+            z-index: 10;
+        }
+        @media (max-width:768px) {
+            .other-links {
+                top: 0px;
+                left: -350px;
+            }
+            #other-links:hover+.other-links {
+                bottom: -230px;
+            }
+        }
+    }
+}
