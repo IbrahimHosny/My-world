@@ -108,8 +108,9 @@
             }
             .links:hover .burger-menu {
                 height: 100%;
-                top: 135px;
-                right: -85px;
+                top: 0;
+                right: 45px;
+                position: absolute;
                 div {
                     margin: 0;
                 }
@@ -201,6 +202,7 @@
         }
         #other-links {
             position: relative;
+            font-weight: 600;
             .other-links {
             background-color: white;
             position: absolute;
@@ -224,20 +226,27 @@
                 display: flex;
                 align-items: center;
             }
+            @media (max-width:768px) {
+                a {
+                    width: 120px;
+                }
+            }
         }
+        &:hover .other-links {
+                bottom: -300px;
+                opacity: 100%;
+            }
         @media (max-width:768px) {
             .other-links {
-                top: 0px;
+                top: -50px;
                 left: -350px;
                 width: fit-content;
                 height: fit-content;
-                left: -200px;
+                left: -170px;
                 padding: 0px 25px;
             }
         }
-            #other-links:hover+.other-links {
-                bottom: -230px;
-            }
+
             @media (max-width:768px) {
                 &:hover .other-links {
                     opacity: 100%;

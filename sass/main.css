@@ -192,8 +192,9 @@ a {
   }
   .main-nav .container .links:hover .burger-menu {
     height: 100%;
-    top: 135px;
-    right: -85px;
+    top: 0;
+    right: 45px;
+    position: absolute;
   }
   .main-nav .container .links:hover .burger-menu div {
     margin: 0;
@@ -318,6 +319,7 @@ a {
 
 .main-nav ul #other-links {
   position: relative;
+  font-weight: 600;
 }
 
 .main-nav ul #other-links .other-links {
@@ -358,8 +360,19 @@ a {
 }
 
 @media (max-width: 768px) {
+  .main-nav ul #other-links .other-links a {
+    width: 120px;
+  }
+}
+
+.main-nav ul #other-links:hover .other-links {
+  bottom: -300px;
+  opacity: 100%;
+}
+
+@media (max-width: 768px) {
   .main-nav ul #other-links .other-links {
-    top: 0px;
+    top: -50px;
     left: -350px;
     width: -webkit-fit-content;
     width: -moz-fit-content;
@@ -367,13 +380,9 @@ a {
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
-    left: -200px;
+    left: -170px;
     padding: 0px 25px;
   }
-}
-
-.main-nav ul #other-links #other-links:hover + .other-links {
-  bottom: -230px;
 }
 
 @media (max-width: 768px) {
