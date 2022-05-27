@@ -372,7 +372,7 @@ a {
 
 @media (max-width: 768px) {
   .main-nav ul #other-links .other-links {
-    top: -50px;
+    top: -150px;
     left: -350px;
     width: -webkit-fit-content;
     width: -moz-fit-content;
@@ -382,6 +382,9 @@ a {
     height: fit-content;
     left: -170px;
     padding: 0px 25px;
+  }
+  .main-nav ul #other-links .other-links a {
+    height: 60px;
   }
 }
 

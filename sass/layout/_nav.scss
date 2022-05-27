@@ -238,12 +238,15 @@
             }
         @media (max-width:768px) {
             .other-links {
-                top: -50px;
+                top: -150px;
                 left: -350px;
                 width: fit-content;
                 height: fit-content;
                 left: -170px;
                 padding: 0px 25px;
+                a {
+                    height: 60px;
+                }
             }
         }
 
