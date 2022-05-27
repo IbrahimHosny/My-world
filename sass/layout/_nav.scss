@@ -225,19 +225,25 @@
                 align-items: center;
             }
         }
-        }
-        #other-links:hover .other-links {
-            opacity: 100%;
-            bottom: -300px;
-            z-index: 10;
-        }
         @media (max-width:768px) {
             .other-links {
                 top: 0px;
                 left: -350px;
+                width: fit-content;
+                height: fit-content;
+                left: -200px;
+                padding: 0px 25px;
             }
+        }
             #other-links:hover+.other-links {
                 bottom: -230px;
+            }
+            @media (max-width:768px) {
+                &:hover .other-links {
+                    opacity: 100%;
+                    bottom: -300px;
+                    z-index: 10;
+                }
             }
         }
     }
