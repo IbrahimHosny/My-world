@@ -114,7 +114,7 @@ function scrollCount(ele) {
 
 
 // ################# (Event-countDown) ###############
-let eventCountdown = new Date ('Dec 31, 2022 23:59:59').getTime();
+let eventCountdown = new Date ('Dec 31, 2023 23:59:59').getTime();
 
 let eventCounter = setInterval(() => {
     let dateNow = new Date().getTime();
